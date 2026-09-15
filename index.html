@@ -40,7 +40,8 @@
     border-bottom:1px solid var(--line);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
-  .brand{font-family:var(--serif);font-size:1.28rem;font-weight:600;letter-spacing:0.01em;text-decoration:none;}
+  .brand{font-family:var(--serif);font-size:1.28rem;font-weight:600;letter-spacing:0.01em;text-decoration:none;display:flex;align-items:center;gap:10px;}
+  .brand img{height:38px;width:auto;display:block;}
   .brand span{color:var(--gold);}
   nav.links{display:flex;gap:30px;font-size:0.94rem;}
   nav.links a{text-decoration:none;color:var(--ink-soft);border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color .15s ease, color .15s ease;}
@@ -208,6 +209,8 @@
 
   footer{padding:36px 0;}
   .foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.85rem;color:var(--ink-soft);}
+  .foot-logos{display:flex;align-items:center;gap:20px;margin-bottom:18px;}
+  .foot-logos img{height:36px;width:auto;}
 
   @media (max-width:760px){
     nav.links{display:none;}
@@ -225,7 +228,10 @@
 
 <header>
   <div class="wrap nav">
-    <a href="#top" class="brand">CIPP <span>·</span> Centro de Innovación en Piso Pélvico</a>
+    <a href="#top" class="brand">
+      <img src="https://static.wixstatic.com/media/304492_33065e5c21754c7584bd80eddd48d93c~mv2.png" alt="Logo CIPP">
+      CIPP <span>·</span> Centro de Innovación en Piso Pélvico
+    </a>
     <nav class="links">
       <a href="#mision">Misión</a>
       <a href="#areas">Áreas clínicas</a>
@@ -509,9 +515,15 @@
 </section>
 
 <footer>
-  <div class="wrap foot-row">
-    <span>© 2026 Centro de Innovación en Piso Pélvico (CIPP)</span>
-    <span>cipp-chile.cl</span>
+  <div class="wrap">
+    <div class="foot-logos">
+      <img src="https://static.wixstatic.com/media/304492_33065e5c21754c7584bd80eddd48d93c~mv2.png" alt="Logo CIPP">
+      <img src="https://static.wixstatic.com/media/304492_78ee0b407a2b457696e1decb1984b251~mv2.png" alt="Logo Complejo Asistencial Dr. Sótero del Río">
+    </div>
+    <div class="foot-row">
+      <span>© 2026 Centro de Innovación en Piso Pélvico (CIPP)</span>
+      <span>cipp-chile.cl</span>
+    </div>
   </div>
 </footer>
 
