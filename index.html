@@ -143,7 +143,10 @@
     color:var(--gold);
     display:flex;align-items:center;justify-content:center;
     font-family:var(--serif);font-size:1.6rem;font-weight:600;
+    overflow:hidden;
+    flex-shrink:0;
   }
+  .avatar img{width:100%;height:100%;object-fit:cover;}
   .team-row h3{font-family:var(--serif);font-size:1.2rem;margin:0 0 4px;font-weight:600;}
   .team-role{color:var(--gold);font-size:0.9rem;font-weight:600;margin:0 0 10px;}
   .team-row p{margin:0 0 8px;color:var(--ink-soft);font-size:0.97rem;}
@@ -167,6 +170,7 @@
     text-align:center;
     padding:10px;
     background:var(--paper-raised);
+    overflow:hidden;
   }
   .gallery-slot .icon{font-size:1.6rem;opacity:0.5;}
 
@@ -308,7 +312,7 @@
     <div class="team-list">
 
       <div class="team-row">
-        <div class="avatar">JP</div>
+        <div class="avatar"><img src="images/pizarro.jpg" alt="Dr. Javier Pizarro-Berdichevsky"></div>
         <div>
           <h3>Dr. Javier Pizarro-Berdichevsky</h3>
           <p class="team-role">Uroginecólogo · Cirugía de piso pélvico</p>
@@ -323,7 +327,7 @@
       </div>
 
       <div class="team-row">
-        <div class="avatar">BB</div>
+        <div class="avatar"><img src="images/blumel.jpg" alt="Dra. Bernardita Blümel"></div>
         <div>
           <h3>Dra. Bernardita Blümel</h3>
           <p class="team-role">Uroginecóloga</p>
@@ -337,7 +341,7 @@
       </div>
 
       <div class="team-row">
-        <div class="avatar">RC</div>
+        <div class="avatar"><img src="images/cuevas.jpg" alt="Dr. Rodrigo Cuevas"></div>
         <div>
           <h3>Dr. Rodrigo Cuevas</h3>
           <p class="team-role">Equipo CIPP</p>
@@ -349,7 +353,7 @@
       </div>
 
       <div class="team-row">
-        <div class="avatar">SP</div>
+        <div class="avatar"><img src="images/pohllhammer.jpg" alt="Dra. Simone Pohllhammer"></div>
         <div>
           <h3>Dra. Simone Pohllhammer</h3>
           <p class="team-role">Equipo CIPP</p>
@@ -361,7 +365,7 @@
       </div>
 
       <div class="team-row">
-        <div class="avatar">FS</div>
+        <div class="avatar"><img src="images/santis.jpg" alt="Dra. Fernanda Santis Moya"></div>
         <div>
           <h3>Dra. Fernanda Santis Moya</h3>
           <p class="team-role">Uroginecóloga · Cirugía de piso pélvico</p>
@@ -376,7 +380,7 @@
       </div>
 
       <div class="team-row">
-        <div class="avatar">AS</div>
+        <div class="avatar"><img src="images/silva.jpg" alt="Dr. Álvaro Silva"></div>
         <div>
           <h3>Dr. Álvaro Silva</h3>
           <p class="team-role">Equipo CIPP</p>
@@ -388,7 +392,7 @@
       </div>
 
       <div class="team-row">
-        <div class="avatar">GA</div>
+        <div class="avatar"><img src="images/alarcon.jpg" alt="Dra. Gabriela Alarcón"></div>
         <div>
           <h3>Dra. Gabriela Alarcón</h3>
           <p class="team-role">Equipo CIPP</p>
@@ -400,7 +404,7 @@
       </div>
 
       <div class="team-row">
-        <div class="avatar">MG</div>
+        <div class="avatar"><img src="images/gomez.jpg" alt="Dr. Miguel Gómez"></div>
         <div>
           <h3>Dr. Miguel Gómez</h3>
           <p class="team-role">Equipo CIPP</p>
@@ -434,14 +438,14 @@
     <h2>Momentos del equipo y actividad académica</h2>
     <p style="color:var(--ink-soft);max-width:60ch;margin:0 0 24px;">Espacio reservado para fotos reales del equipo, cirugías, congresos y actividades del centro (por ejemplo, desde el Instagram @cippchile). Sube las imágenes y las incorporamos aquí.</p>
     <div class="gallery-grid">
-      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 1</div>
-      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 2</div>
-      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 3</div>
-      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 4</div>
-      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 5</div>
-      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 6</div>
-      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 7</div>
-      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 8</div>
+      <div class="gallery-slot" style="border:none;padding:0;"><img src="images/equipo-completo.jpg" alt="Equipo completo del CIPP" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="gallery-slot" style="border:none;padding:0;"><img src="images/kinesiologos.jpg" alt="Kinesiólogos del CIPP" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="gallery-slot" style="border:none;padding:0;"><img src="images/tens.jpg" alt="Equipo de TENS del CIPP" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente</div>
     </div>
   </div>
 </section>
