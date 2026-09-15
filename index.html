@@ -148,6 +148,36 @@
   .team-affil{font-size:0.87rem;color:var(--ink-soft);}
   .team-interest{font-size:0.9rem;}
   .team-interest strong{color:var(--ink);}
+  .team-links{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap;}
+  .team-links a{font-size:0.85rem;text-decoration:none;border-bottom:1px solid var(--gold);}
+  .team-links .pending{font-size:0.85rem;color:var(--ink-soft);font-style:italic;border-bottom:none;}
+
+  /* Gallery */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .gallery-slot{
+    aspect-ratio:1/1;
+    border:1px dashed var(--line);
+    border-radius:2px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:8px;
+    color:var(--ink-soft);
+    font-size:0.78rem;
+    text-align:center;
+    padding:10px;
+    background:var(--paper-raised);
+  }
+  .gallery-slot .icon{font-size:1.6rem;opacity:0.5;}
+
+  /* Publications */
+  .pub-list{list-style:none;margin:0;padding:0;}
+  .pub-item{
+    padding:22px 0;
+    border-top:1px solid var(--line);
+  }
+  .pub-list .pub-item:last-child{border-bottom:1px solid var(--line);}
+  .pub-title{font-family:var(--serif);font-size:1.08rem;font-weight:600;margin:0 0 6px;}
+  .pub-meta{font-size:0.88rem;color:var(--ink-soft);}
+  .pub-link{font-size:0.85rem;text-decoration:none;border-bottom:1px solid var(--gold);}
 
   /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
@@ -183,6 +213,7 @@
     nav.links{display:none;}
     .hero-grid, .mission-grid, .contact-grid{grid-template-columns:1fr;gap:36px;}
     .areas-list{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
     .areas-list li:nth-child(odd){border-right:none;padding-right:0;}
     .areas-list li:nth-child(even){padding-left:0;}
     .team-row{grid-template-columns:72px 1fr;}
@@ -199,6 +230,8 @@
       <a href="#mision">Misión</a>
       <a href="#areas">Áreas clínicas</a>
       <a href="#equipo">Equipo</a>
+      <a href="#galeria">Galería</a>
+      <a href="#publicaciones">Publicaciones</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
@@ -275,6 +308,10 @@
           <p>Especialista en Ginecología y Obstetricia por la Pontificia Universidad Católica de Chile, se integró al equipo del CIPP en 2009. Realizó su subespecialidad en Uroginecología y Cirugía Reconstructiva Pélvica en Cleveland Clinic, EE.UU. (2012–2016), y dirigió el CIPP entre 2016 y 2023.</p>
           <p class="team-affil">También se desempeña en la Red de Salud UC Christus.</p>
           <p class="team-interest"><strong>Áreas de interés:</strong> vejiga hiperactiva, cirugía reconstructiva, manejo de complicaciones quirúrgicas, neuromodulación sacra.</p>
+          <div class="team-links">
+            <a href="https://scholar.google.com/citations?user=PjfbCFwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://agenda.ucchristus.cl/reserva-horas/busqueda?area=aafc27df-882e-413b-bdcd-a96e00ddbc15&tipo=professional&professional=3468b1ed-7aa0-460c-9c7e-a9a80025515d" target="_blank" rel="noopener">Agendar hora</a>
+          </div>
         </div>
       </div>
 
@@ -286,44 +323,144 @@
           <p>Especialista en Ginecología por la Universidad de Chile, realizó su subespecialidad en Uroginecología en el Hospital Clínico de la Universidad de Chile (2010–2011) antes de integrarse al equipo del CIPP.</p>
           <p class="team-affil">También se desempeña en Clínica Santa María.</p>
           <p class="team-interest"><strong>Áreas de interés:</strong> cirugía reconstructiva, cirugía laparoscópica, climaterio, disfunciones sexuales, ecografía de piso pélvico y ginecológica.</p>
+          <div class="team-links">
+            <span class="pending">Google Scholar y agenda: pendiente confirmar</span>
+          </div>
         </div>
       </div>
 
       <div class="team-row">
-        <div class="avatar">TR</div>
+        <div class="avatar">RC</div>
         <div>
-          <h3>Dra. Trinidad Raby</h3>
-          <p class="team-role">Uroginecóloga</p>
-          <p>Especialista en Ginecología por la Pontificia Universidad Católica de Chile, realizó su subespecialidad de Uroginecología en el programa conjunto PUC / Hospital Dr. Sótero del Río (2016–2017), integrándose luego al equipo del CIPP.</p>
-          <p class="team-affil">También se desempeña en la Red de Salud UC Christus.</p>
-          <p class="team-interest"><strong>Áreas de interés:</strong> vejiga hiperactiva, cirugía reconstructiva, manejo de complicaciones quirúrgicas, cirugía laparoscópica.</p>
+          <h3>Dr. Rodrigo Cuevas</h3>
+          <p class="team-role">Equipo CIPP</p>
+          <p style="color:var(--ink-soft);font-style:italic;">Especialidad, subespecialidad y años de formación: pendiente completar.</p>
+          <div class="team-links">
+            <span class="pending">Google Scholar y agenda: pendiente confirmar</span>
+          </div>
         </div>
       </div>
 
       <div class="team-row">
-        <div class="avatar">MA</div>
+        <div class="avatar">SP</div>
         <div>
-          <h3>Dr. Marco Arellano</h3>
-          <p class="team-role">Uroginecólogo</p>
-          <p>Especialista en Ginecología por el Hospital San Borja Arriarán, realizó su subespecialidad de Uroginecología en el Hospital Clínico de la Universidad de Chile (2011–2012) antes de integrarse al equipo del CIPP.</p>
-          <p class="team-affil">También se desempeña en Clínica Santa María.</p>
-          <p class="team-interest"><strong>Áreas de interés:</strong> cirugía reconstructiva, cirugía laparoscópica, vejiga hiperactiva.</p>
+          <h3>Dra. Simone Pohllhammer</h3>
+          <p class="team-role">Equipo CIPP</p>
+          <p style="color:var(--ink-soft);font-style:italic;">Especialidad, subespecialidad y años de formación: pendiente completar.</p>
+          <div class="team-links">
+            <span class="pending">Google Scholar y agenda: pendiente confirmar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-row">
+        <div class="avatar">FS</div>
+        <div>
+          <h3>Dra. Fernanda Santis</h3>
+          <p class="team-role">Equipo CIPP</p>
+          <p style="color:var(--ink-soft);font-style:italic;">Especialidad, subespecialidad y años de formación: pendiente completar.</p>
+          <div class="team-links">
+            <span class="pending">Google Scholar y agenda: pendiente confirmar</span>
+          </div>
         </div>
       </div>
 
       <div class="team-row">
         <div class="avatar">AS</div>
         <div>
-          <h3>Dr. Álvaro Saavedra</h3>
-          <p class="team-role">Urología reconstructiva y funcional</p>
-          <p>Especialista en Urología por la Pontificia Universidad Católica de Chile, con estudios de perfeccionamiento en epidemiología e investigación (Diplomado en Global Health, Universidad de Tampere, Finlandia). Se integró al CIPP en 2017 y realizó un Clinical Fellowship en Urología Reconstructiva y Funcional en la Universidad de Alberta, Canadá (2017–2018).</p>
-          <p class="team-affil">También se desempeña en Clínica Alemana.</p>
-          <p class="team-interest"><strong>Áreas de interés:</strong> incontinencia urinaria femenina y masculina, enfermedades de la uretra, disfunción eréctil, fístulas urinarias, complicaciones de tratamiento oncológico urológico, reconstrucción genital compleja, manejo urológico neurológico.</p>
+          <h3>Dr. Álvaro Silva</h3>
+          <p class="team-role">Equipo CIPP</p>
+          <p style="color:var(--ink-soft);font-style:italic;">Especialidad, subespecialidad y años de formación: pendiente completar.</p>
+          <div class="team-links">
+            <span class="pending">Google Scholar y agenda: pendiente confirmar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-row">
+        <div class="avatar">GA</div>
+        <div>
+          <h3>Dra. Gabriela Alarcón</h3>
+          <p class="team-role">Equipo CIPP</p>
+          <p style="color:var(--ink-soft);font-style:italic;">Especialidad, subespecialidad y años de formación: pendiente completar.</p>
+          <div class="team-links">
+            <span class="pending">Google Scholar y agenda: pendiente confirmar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-row">
+        <div class="avatar">MG</div>
+        <div>
+          <h3>Dr. Miguel Gómez</h3>
+          <p class="team-role">Equipo CIPP</p>
+          <p style="color:var(--ink-soft);font-style:italic;">Especialidad, subespecialidad y años de formación: pendiente completar.</p>
+          <div class="team-links">
+            <span class="pending">Google Scholar y agenda: pendiente confirmar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-row">
+        <div class="avatar">PG</div>
+        <div>
+          <h3>Dr. Pedro Gutiérrez</h3>
+          <p class="team-role">Equipo CIPP</p>
+          <p style="color:var(--ink-soft);font-style:italic;">Especialidad, subespecialidad y años de formación: pendiente completar.</p>
+          <div class="team-links">
+            <span class="pending">Google Scholar y agenda: pendiente confirmar</span>
+          </div>
         </div>
       </div>
 
     </div>
-    <p style="font-size:0.85rem;color:var(--ink-soft);margin-top:26px;">Nota: roles y afiliaciones deben confirmarse antes de publicar — algunos han podido cambiar desde la última actualización del sitio anterior.</p>
+    <p style="font-size:0.85rem;color:var(--ink-soft);margin-top:26px;">Nota: faltan por completar especialidad, biografía breve, y enlaces de Google Scholar y agenda de reserva de horas para los nuevos miembros del equipo.</p>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <p class="kicker">Galería</p>
+    <h2>Momentos del equipo y actividad académica</h2>
+    <p style="color:var(--ink-soft);max-width:60ch;margin:0 0 24px;">Espacio reservado para fotos reales del equipo, cirugías, congresos y actividades del centro (por ejemplo, desde el Instagram @cippchile). Sube las imágenes y las incorporamos aquí.</p>
+    <div class="gallery-grid">
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 1</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 2</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 3</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 4</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 5</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 6</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 7</div>
+      <div class="gallery-slot"><span class="icon">🖼️</span>Foto pendiente 8</div>
+    </div>
+  </div>
+</section>
+
+<section id="publicaciones">
+  <div class="wrap">
+    <p class="kicker">Publicaciones destacadas</p>
+    <h2>Producción científica del equipo</h2>
+    <p style="color:var(--ink-soft);max-width:60ch;margin:0 0 8px;">Una muestra de publicaciones recientes en neuromodulación sacra y piso pélvico. Lista completa disponible en Google Scholar y ORCID.</p>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <p class="pub-title">Sacral neuromodulation therapy for urinary and defecatory disorders: experience in a Latin American public hospital</p>
+        <p class="pub-meta">Arellano Albornoz M, Pizarro-Berdichevsky J, et al. · International Urogynecology Journal (FBGO), 2024</p>
+        <a class="pub-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11075388/" target="_blank" rel="noopener">Ver publicación</a>
+      </li>
+      <li class="pub-item">
+        <p class="pub-title">A novel sacral neuromodulation protocol is associated with reduction in removal for device infection</p>
+        <p class="pub-meta">Pizarro-Berdichevsky J, et al. · International Urogynecology Journal, 2023</p>
+        <a class="pub-link" href="https://link.springer.com/article/10.1007/s00192-023-05543-z" target="_blank" rel="noopener">Ver publicación</a>
+      </li>
+      <li class="pub-item">
+        <p class="pub-title">Sacral neuromodulation - when and for who</p>
+        <p class="pub-meta">Mass-Lindenbaum M, Calderón-Pollak D, Goldman HB, Pizarro-Berdichevsky J. · International Braz J Urol, 2021</p>
+        <a class="pub-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7993957/" target="_blank" rel="noopener">Ver publicación</a>
+      </li>
+    </ul>
+    <p style="margin-top:22px;">
+      <a class="pub-link" href="https://scholar.google.com/citations?user=PjfbCFwAAAAJ&hl=en" target="_blank" rel="noopener">Ver perfil completo en Google Scholar</a>
+    </p>
   </div>
 </section>
 
