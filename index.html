@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIPP — Centro de Innovación en Piso Pélvico</title>
+<meta name="description" content="Centro de Innovación en Piso Pélvico (CIPP), Hospital Dr. Sótero del Río. Referencia en Chile para patología compleja de piso pélvico, uroginecología y urología funcional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#132C33;
+    --ink-soft:#3C555C;
+    --paper:#F3F5F4;
+    --paper-raised:#FFFFFF;
+    --line:#D6DCDA;
+    --gold:#A9762F;
+    --gold-soft:#EFE3D0;
+    --serif: "Source Serif 4", Georgia, serif;
+    --sans: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:20;
+    background:rgba(243,245,244,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+  .brand{font-family:var(--serif);font-size:1.28rem;font-weight:600;letter-spacing:0.01em;text-decoration:none;}
+  .brand span{color:var(--gold);}
+  nav.links{display:flex;gap:30px;font-size:0.94rem;}
+  nav.links a{text-decoration:none;color:var(--ink-soft);border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color .15s ease, color .15s ease;}
+  nav.links a:hover{color:var(--ink);border-color:var(--gold);}
+  .nav-toggle{display:none;}
+
+  /* Hero */
+  .hero{
+    padding:96px 0 84px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:end;}
+  .hero-eyebrow{font-size:0.95rem;color:var(--ink-soft);margin:0 0 18px;}
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(2.1rem, 4vw, 3.15rem);
+    line-height:1.12;
+    margin:0 0 22px;
+    max-width:15ch;
+  }
+  .hero p.lead{font-size:1.08rem;color:var(--ink-soft);max-width:46ch;margin:0 0 30px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:13px 26px;
+    border-radius:2px;
+    font-size:0.95rem;
+    text-decoration:none;
+    font-weight:600;
+    transition:opacity .15s ease;
+  }
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink);}
+  .btn:hover{opacity:0.82;}
+
+  .hero-fact{
+    border-left:2px solid var(--gold);
+    padding-left:20px;
+  }
+  .hero-fact + .hero-fact{margin-top:22px;}
+  .hero-fact .num{font-family:var(--serif);font-size:1.9rem;display:block;font-weight:600;}
+  .hero-fact .lbl{font-size:0.88rem;color:var(--ink-soft);}
+
+  /* Section rhythm */
+  section{padding:76px 0;border-bottom:1px solid var(--line);}
+  .kicker{
+    font-size:0.9rem;
+    color:var(--gold);
+    margin:0 0 10px;
+    font-weight:600;
+  }
+  h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(1.6rem, 2.6vw, 2.1rem);
+    margin:0 0 26px;
+    max-width:22ch;
+  }
+
+  /* Mission */
+  .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+  .mission-grid p{color:var(--ink-soft);font-size:1.03rem;margin:0 0 16px;}
+  blockquote{
+    font-family:var(--serif);
+    font-size:1.3rem;
+    line-height:1.5;
+    margin:0;
+    padding:24px 0 0 0;
+    border-top:1px solid var(--line);
+  }
+  blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:0.88rem;color:var(--ink-soft);margin-top:12px;}
+
+  /* Areas */
+  .areas-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line);}
+  .areas-list li{
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+    font-size:1rem;
+  }
+  .areas-list li:nth-child(odd){padding-right:30px;border-right:1px solid var(--line);}
+  .areas-list li:nth-child(even){padding-left:30px;}
+
+  /* Team */
+  .team-list{display:flex;flex-direction:column;}
+  .team-row{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:28px;
+    padding:30px 0;
+    border-top:1px solid var(--line);
+  }
+  .team-row:last-child{border-bottom:1px solid var(--line);}
+  .avatar{
+    width:96px;height:96px;
+    border-radius:50%;
+    background:var(--gold-soft);
+    color:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:1.6rem;font-weight:600;
+  }
+  .team-row h3{font-family:var(--serif);font-size:1.2rem;margin:0 0 4px;font-weight:600;}
+  .team-role{color:var(--gold);font-size:0.9rem;font-weight:600;margin:0 0 10px;}
+  .team-row p{margin:0 0 8px;color:var(--ink-soft);font-size:0.97rem;}
+  .team-affil{font-size:0.87rem;color:var(--ink-soft);}
+  .team-interest{font-size:0.9rem;}
+  .team-interest strong{color:var(--ink);}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+  .contact-item{margin-bottom:22px;}
+  .contact-item .lbl{display:block;font-size:0.85rem;color:var(--ink-soft);margin-bottom:4px;}
+  .contact-item .val{font-size:1.05rem;}
+  .contact-item a{text-decoration:none;border-bottom:1px solid var(--gold);}
+  .social-row{display:flex;gap:18px;margin-top:8px;}
+  .social-row a{font-size:0.92rem;text-decoration:none;border-bottom:1px solid var(--line);}
+  .social-row a:hover{border-color:var(--ink);}
+
+  form{display:flex;flex-direction:column;gap:14px;}
+  label{font-size:0.85rem;color:var(--ink-soft);}
+  input, textarea{
+    font-family:var(--sans);
+    font-size:0.98rem;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:2px;
+    background:var(--paper-raised);
+    color:var(--ink);
+  }
+  textarea{min-height:110px;resize:vertical;}
+  form button{
+    align-self:flex-start;
+    margin-top:6px;
+  }
+
+  footer{padding:36px 0;}
+  .foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.85rem;color:var(--ink-soft);}
+
+  @media (max-width:760px){
+    nav.links{display:none;}
+    .hero-grid, .mission-grid, .contact-grid{grid-template-columns:1fr;gap:36px;}
+    .areas-list{grid-template-columns:1fr;}
+    .areas-list li:nth-child(odd){border-right:none;padding-right:0;}
+    .areas-list li:nth-child(even){padding-left:0;}
+    .team-row{grid-template-columns:72px 1fr;}
+    .avatar{width:64px;height:64px;font-size:1.2rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">CIPP <span>·</span> Centro de Innovación en Piso Pélvico</a>
+    <nav class="links">
+      <a href="#mision">Misión</a>
+      <a href="#areas">Áreas clínicas</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-eyebrow">Hospital Dr. Sótero del Río — Red asistencial y académica UC</p>
+      <h1>Referencia nacional en patología compleja del piso pélvico</h1>
+      <p class="lead">Un equipo multidisciplinario de uroginecología, urología funcional y coloproctología dedicado a resolver condiciones que no encuentran solución en la ginecología o urología general, con un fuerte compromiso académico y de formación de subespecialistas.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Solicitar interconsulta</a>
+        <a href="#equipo" class="btn btn-ghost">Conocer al equipo</a>
+      </div>
+    </div>
+    <div>
+      <div class="hero-fact">
+        <span class="num">250+</span>
+        <span class="lbl">implantes de neuromodulación sacra realizados por el equipo</span>
+      </div>
+      <div class="hero-fact">
+        <span class="num">2009</span>
+        <span class="lbl">años de trabajo continuo como centro de referencia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mision">
+  <div class="wrap mission-grid">
+    <div>
+      <p class="kicker">Misión</p>
+      <h2>Mejorar la calidad de vida de quienes viven con condiciones complejas de piso pélvico</h2>
+      <p>Somos un grupo de profesionales organizados como centro de referencia de alta complejidad para usuarios del sistema de salud chileno que sufren una condición compleja del piso pélvico, urológica funcional, reconstructiva, neurourológica o transicional que no es posible resolver en las unidades de ginecología o urología general del país.</p>
+      <p>Mantenemos un foco marcado en la vida académica, con presencia activa en las instancias más relevantes a nivel mundial y formación constante de los próximos subespecialistas.</p>
+    </div>
+    <blockquote>
+      “Pobre es el alumno que no supera al maestro.”
+      <cite>Leonardo da Vinci</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <p class="kicker">Sobre el centro</p>
+    <h2>Un equipo multidisciplinario para una atención integral</h2>
+    <p style="color:var(--ink-soft);max-width:60ch;margin:0 0 8px;">El CIPP está compuesto por uroginecólogos, urólogos, matronas y coloproctólogos, entre otros especialistas. Estas son algunas de nuestras áreas de trabajo:</p>
+    <ul class="areas-list">
+      <li>Manejo avanzado del síndrome de vejiga hiperactiva</li>
+      <li>Cirugía reconstructiva de piso pélvico</li>
+      <li>Manejo de complicaciones quirúrgicas (mallas, cirugías previas)</li>
+      <li>Cirugía laparoscópica de piso pélvico</li>
+      <li>Neuromodulación sacra</li>
+      <li>Urología reconstructiva y funcional, fístulas urinarias</li>
+      <li>Incontinencia urinaria femenina y masculina</li>
+      <li>Disfunciones sexuales y climaterio</li>
+    </ul>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="wrap">
+    <p class="kicker">Nuestro equipo</p>
+    <h2>Especialistas dedicados a piso pélvico y urología funcional</h2>
+    <div class="team-list">
+
+      <div class="team-row">
+        <div class="avatar">JP</div>
+        <div>
+          <h3>Dr. Javier Pizarro-Berdichevsky</h3>
+          <p class="team-role">Uroginecólogo · Cirugía de piso pélvico</p>
+          <p>Especialista en Ginecología y Obstetricia por la Pontificia Universidad Católica de Chile, se integró al equipo del CIPP en 2009. Realizó su subespecialidad en Uroginecología y Cirugía Reconstructiva Pélvica en Cleveland Clinic, EE.UU. (2012–2016), y dirigió el CIPP entre 2016 y 2023.</p>
+          <p class="team-affil">También se desempeña en la Red de Salud UC Christus.</p>
+          <p class="team-interest"><strong>Áreas de interés:</strong> vejiga hiperactiva, cirugía reconstructiva, manejo de complicaciones quirúrgicas, neuromodulación sacra.</p>
+        </div>
+      </div>
+
+      <div class="team-row">
+        <div class="avatar">BB</div>
+        <div>
+          <h3>Dra. Bernardita Blümel</h3>
+          <p class="team-role">Uroginecóloga</p>
+          <p>Especialista en Ginecología por la Universidad de Chile, realizó su subespecialidad en Uroginecología en el Hospital Clínico de la Universidad de Chile (2010–2011) antes de integrarse al equipo del CIPP.</p>
+          <p class="team-affil">También se desempeña en Clínica Santa María.</p>
+          <p class="team-interest"><strong>Áreas de interés:</strong> cirugía reconstructiva, cirugía laparoscópica, climaterio, disfunciones sexuales, ecografía de piso pélvico y ginecológica.</p>
+        </div>
+      </div>
+
+      <div class="team-row">
+        <div class="avatar">TR</div>
+        <div>
+          <h3>Dra. Trinidad Raby</h3>
+          <p class="team-role">Uroginecóloga</p>
+          <p>Especialista en Ginecología por la Pontificia Universidad Católica de Chile, realizó su subespecialidad de Uroginecología en el programa conjunto PUC / Hospital Dr. Sótero del Río (2016–2017), integrándose luego al equipo del CIPP.</p>
+          <p class="team-affil">También se desempeña en la Red de Salud UC Christus.</p>
+          <p class="team-interest"><strong>Áreas de interés:</strong> vejiga hiperactiva, cirugía reconstructiva, manejo de complicaciones quirúrgicas, cirugía laparoscópica.</p>
+        </div>
+      </div>
+
+      <div class="team-row">
+        <div class="avatar">MA</div>
+        <div>
+          <h3>Dr. Marco Arellano</h3>
+          <p class="team-role">Uroginecólogo</p>
+          <p>Especialista en Ginecología por el Hospital San Borja Arriarán, realizó su subespecialidad de Uroginecología en el Hospital Clínico de la Universidad de Chile (2011–2012) antes de integrarse al equipo del CIPP.</p>
+          <p class="team-affil">También se desempeña en Clínica Santa María.</p>
+          <p class="team-interest"><strong>Áreas de interés:</strong> cirugía reconstructiva, cirugía laparoscópica, vejiga hiperactiva.</p>
+        </div>
+      </div>
+
+      <div class="team-row">
+        <div class="avatar">AS</div>
+        <div>
+          <h3>Dr. Álvaro Saavedra</h3>
+          <p class="team-role">Urología reconstructiva y funcional</p>
+          <p>Especialista en Urología por la Pontificia Universidad Católica de Chile, con estudios de perfeccionamiento en epidemiología e investigación (Diplomado en Global Health, Universidad de Tampere, Finlandia). Se integró al CIPP en 2017 y realizó un Clinical Fellowship en Urología Reconstructiva y Funcional en la Universidad de Alberta, Canadá (2017–2018).</p>
+          <p class="team-affil">También se desempeña en Clínica Alemana.</p>
+          <p class="team-interest"><strong>Áreas de interés:</strong> incontinencia urinaria femenina y masculina, enfermedades de la uretra, disfunción eréctil, fístulas urinarias, complicaciones de tratamiento oncológico urológico, reconstrucción genital compleja, manejo urológico neurológico.</p>
+        </div>
+      </div>
+
+    </div>
+    <p style="font-size:0.85rem;color:var(--ink-soft);margin-top:26px;">Nota: roles y afiliaciones deben confirmarse antes de publicar — algunos han podido cambiar desde la última actualización del sitio anterior.</p>
+  </div>
+</section>
+
+<section id="contacto" style="border-bottom:none;">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="kicker">Contacto</p>
+      <h2>Póngase en contacto con el CIPP</h2>
+      <div class="contact-item">
+        <span class="lbl">Sede</span>
+        <span class="val">Hospital Dr. Sótero del Río, Santiago, Chile</span>
+      </div>
+      <div class="contact-item">
+        <span class="lbl">Correo institucional</span>
+        <span class="val"><a href="mailto:contacto@cipp-chile.cl">contacto@cipp-chile.cl</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="lbl">Redes sociales</span>
+        <div class="social-row">
+          <a href="https://www.instagram.com/cippchile/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/CIPP-chile-109717564156152/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://twitter.com/cinvesppelviano" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://www.youtube.com/channel/UC-PPM6SfVwRdCMFgTAhByHQ" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <form action="#" method="POST">
+        <div>
+          <label for="nombre">Nombre</label><br>
+          <input id="nombre" name="nombre" type="text" required style="width:100%;">
+        </div>
+        <div>
+          <label for="email">Correo electrónico</label><br>
+          <input id="email" name="email" type="email" required style="width:100%;">
+        </div>
+        <div>
+          <label for="mensaje">Mensaje</label><br>
+          <textarea id="mensaje" name="mensaje" required style="width:100%;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      </form>
+      <p style="font-size:0.8rem;color:var(--ink-soft);margin-top:10px;">Este formulario aún no está conectado a un servicio de envío — ver notas de implementación.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© 2026 Centro de Innovación en Piso Pélvico (CIPP)</span>
+    <span>cipp-chile.cl</span>
+  </div>
+</footer>
+
+</body>
+</html>
