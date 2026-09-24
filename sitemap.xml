@@ -7,8 +7,4 @@
     <priority>1.0</priority>
   </url>
 
-  <url><loc>https://cipp-chile.cl/blog/</loc><lastmod>2026-09-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cipp-chile.cl/blog/me-estoy-haciendo-pipi/</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
-  <url><loc>https://cipp-chile.cl/blog/me-hago-caca/</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
-  <url><loc>https://cipp-chile.cl/blog/siento-que-me-baja-algo/</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
 </urlset>
