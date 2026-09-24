@@ -502,7 +502,11 @@
       </div>
     </div>
     <div>
-      <form action="#" method="POST">
+      <form action="https://formsubmit.co/contacto@cipp-chile.cl" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web del CIPP">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://javierpizarro-source.github.io/cipp-web/?mensaje=enviado#contacto">
+        <input type="text" name="_honey" style="display:none">
         <div>
           <label for="nombre">Nombre</label><br>
           <input id="nombre" name="nombre" type="text" required style="width:100%;">
@@ -517,7 +521,12 @@
         </div>
         <button type="submit" class="btn btn-primary">Enviar mensaje</button>
       </form>
-      <p style="font-size:0.8rem;color:var(--ink-soft);margin-top:10px;">Este formulario aún no está conectado a un servicio de envío — ver notas de implementación.</p>
+      <p id="form-ok" style="display:none;color:#1a7f37;font-size:0.9rem;margin-top:10px;">Mensaje enviado. Gracias por escribirnos; le responderemos a la brevedad.</p>
+      <script>
+      if (new URLSearchParams(window.location.search).get('mensaje') === 'enviado') {
+        document.getElementById('form-ok').style.display = 'block';
+      }
+      </script>
     </div>
   </div>
 </section>
