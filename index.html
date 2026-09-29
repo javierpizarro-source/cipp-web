@@ -408,7 +408,19 @@
   @media (max-width:800px){
     #medios .news-grid, #blog .news-grid{grid-template-columns:1fr !important;}
   }
-.team-photo.placeholder{display:flex;align-items:center;justify-content:center;background:#dce7e6;color:#12292f;font:700 4.5rem/1 var(--serif)}.team-caveat{font-size:.8rem;color:#8a5b20;margin:10px 0 0}.fellows-heading{margin:42px 0 22px;border-top:1px solid var(--line);padding-top:30px}.fellows-heading h3{font:600 1.7rem/1.3 var(--serif);margin:0 0 6px}.fellows-heading p{color:var(--ink-soft);margin:0}</style>
+.team-photo.placeholder{display:flex;align-items:center;justify-content:center;background:#dce7e6;color:#12292f;font:700 4.5rem/1 var(--serif)}.team-caveat{font-size:.8rem;color:#8a5b20;margin:10px 0 0}.fellows-heading{margin:42px 0 22px;border-top:1px solid var(--line);padding-top:30px}.fellows-heading h3{font:600 1.7rem/1.3 var(--serif);margin:0 0 6px}.fellows-heading p{color:var(--ink-soft);margin:0}  /* Alumni del programa de uroginecología */
+  #ex-fellows{background:var(--paper-raised);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .alumni-intro{max-width:760px;}
+  .alumni-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+  .alumni-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow-sm);}
+  .alumni-year{font-size:.76rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 11px;}
+  .alumni-card h3{font-family:var(--serif);font-size:1.34rem;line-height:1.25;margin:0 0 14px;}
+  .alumni-card p:last-child{margin:0;color:var(--ink-soft);}
+  .alumni-card strong{color:var(--ink);font-weight:600;}
+  @media(max-width:650px){.alumni-grid{grid-template-columns:1fr;}.alumni-card{padding:22px;}}
+  .alumni-pending{color:var(--ink-soft);font-style:italic;}
+  .alumni-card{min-height:174px;}
+</style>
 <link rel="canonical" href="https://cipp-chile.cl/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
@@ -755,6 +767,31 @@
       </article>
 
     </div><div class="fellows-heading"><h3>Fellows</h3><p>Profesionales en formación avanzada que integran el equipo.</p></div><div class="team-grid"><article class="team-card reveal"><div class="team-photo"><img src="images/gutierrez.jpg" alt="Dr. Pedro Gutiérrez"></div><div class="team-body"><h3>Dr. Pedro Gutiérrez</h3><p class="team-role">Fellow actual · Equipo CIPP</p></div></article><article class="team-card reveal"><div class="team-photo placeholder" role="img" aria-label="Sin fotografía disponible">NC</div><div class="team-body"><h3>Nicolás Canales</h3><p class="team-role">Fellow · Equipo CIPP</p><p class="bio">Fotografía y biografía en preparación.</p></div></article></div></div></section>
+<section id="ex-fellows" aria-labelledby="ex-fellows-title">
+<div class="wrap">
+<div class="reveal alumni-intro">
+<p class="kicker">Docencia y trayectoria</p>
+<h2 id="ex-fellows-title">Ex fellows</h2>
+<p class="section-lead">Profesionales que realizaron parte de su formación en uroginecología y piso pélvico en el Hospital Dr. Sótero del Río junto al equipo CIPP. Iremos sumando a quienes han pasado por el programa y sus lugares de trabajo actuales.</p>
+</div>
+<div class="alumni-grid">
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow · Actualmente en CIPP</p><h3>Dra. Simone Pohlhammer</h3><p><strong>Hoy:</strong> equipo CIPP, Hospital Dr. Sótero del Río.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Fellowship 2016–2017</p><h3>Dra. Trinidad Raby</h3><p><strong>Hoy:</strong> ginecóloga en UC CHRISTUS.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Fellowship 2016–2017</p><h3>Dr. Sebastián Viguera Torrealba</h3><p><strong>Hoy:</strong> equipo académico de Obstetricia y Ginecología, Pontificia Universidad Católica de Chile.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Fellowship de un año</p><h3>Dr. Ricardo Valderrama Gómez</h3><p class="alumni-pending">Lugar de trabajo actual por confirmar.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Fellowship de dos años · Actualmente en CIPP</p><h3>Dra. Gabriela Alarcón</h3><p><strong>Hoy:</strong> equipo CIPP, Hospital Dr. Sótero del Río.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow</p><h3>Dra. Paz Romero Barra</h3><p><strong>Hoy:</strong> Hospital El Carmen y Clínica Bupa.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow</p><h3>Dra. Fabiola Schlageter</h3><p class="alumni-pending">Lugar de trabajo actual por confirmar.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow · Actualmente en CIPP</p><h3>Dra. Fernanda Santis Moya</h3><p><strong>Hoy:</strong> jefa de la Unidad de Uroginecología y del CIPP, Hospital Dr. Sótero del Río.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow</p><h3>Dra. Andrea Maluenda Ortiz</h3><p class="alumni-pending">Lugar de trabajo actual por confirmar.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow</p><h3>Dr. Diego Arévalo Vega</h3><p><strong>Hoy:</strong> Clínica Andes Salud Concepción.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow</p><h3>Dra. Christine Ledezma Jorquera</h3><p><strong>Hoy:</strong> Clínica Bupa Santiago.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow</p><h3>Dr. Felipe Soto Opitz</h3><p class="alumni-pending">Lugar de trabajo actual por confirmar.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow</p><h3>Dra. Loreto Galdames Retamal</h3><p><strong>Hoy:</strong> Hospital Gustavo Fricke, Viña del Mar.</p></article>
+<article class="alumni-card reveal"><p class="alumni-year">Ex fellow</p><h3>Dr. Pablo Ponce Vásquez</h3><p class="alumni-pending">Lugar de trabajo actual por confirmar.</p></article>
+</div>
+</div>
+</section>
 
 <section id="portal-pacientes" class="patient-portal">
   <div class="wrap">
@@ -1458,4 +1495,4 @@
 })();
 </script>
 </body>
-        </html>
+  </html>
