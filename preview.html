@@ -398,6 +398,17 @@
   @media (max-width:800px){
     #medios .news-grid, #blog .news-grid{grid-template-columns:1fr !important;}
   }
+
+  /* Alumni del programa de uroginecología */
+  #ex-fellows{background:var(--paper-raised);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .alumni-intro{max-width:760px;}
+  .alumni-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+  .alumni-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow-sm);}
+  .alumni-year{font-size:.76rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 11px;}
+  .alumni-card h3{font-family:var(--serif);font-size:1.34rem;line-height:1.25;margin:0 0 14px;}
+  .alumni-card p:last-child{margin:0;color:var(--ink-soft);}
+  .alumni-card strong{color:var(--ink);font-weight:600;}
+  @media(max-width:650px){.alumni-grid{grid-template-columns:1fr;}.alumni-card{padding:22px;}}
 </style>
 <link rel="canonical" href="https://cipp-chile.cl/">
 <meta name="robots" content="index, follow">
@@ -774,6 +785,28 @@
     </div>
   </div>
 </section>
+<section id="ex-fellows" aria-labelledby="ex-fellows-title">
+<div class="wrap">
+<div class="reveal alumni-intro">
+<p class="kicker">Docencia y trayectoria</p>
+<h2 id="ex-fellows-title">Ex fellows</h2>
+<p class="section-lead">Profesionales que realizaron parte de su formación en uroginecología y piso pélvico en el Hospital Dr. Sótero del Río junto al equipo CIPP. Iremos sumando a quienes han pasado por el programa y sus lugares de trabajo actuales.</p>
+</div>
+<div class="alumni-grid">
+<article class="alumni-card reveal">
+<p class="alumni-year">Fellowship 2016–2017</p>
+<h3>Dra. Trinidad Raby</h3>
+<p><strong>Hoy:</strong> ginecóloga en UC CHRISTUS.</p>
+</article>
+<article class="alumni-card reveal">
+<p class="alumni-year">Fellowship 2016–2017</p>
+<h3>Dr. Sebastián Viguera Torrealba</h3>
+<p><strong>Hoy:</strong> equipo académico de Obstetricia y Ginecología, Pontificia Universidad Católica de Chile.</p>
+</article>
+</div>
+</div>
+</section>
+
 
 <section id="publicaciones">
   <div class="wrap">
